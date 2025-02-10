@@ -14,6 +14,6 @@ RUN ./gradlew build -x test
 FROM openjdk:21-jdk
 VOLUME /tmp
 
-COPY --from=build /app/target/*.jar app.jar
+COPY --from=build /build/libs/*.jar app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
 EXPOSE 8080
