@@ -8,7 +8,7 @@ COPY gradlew .
 COPY gradle gradle
 
 RUN chmod +x ./gradlew
-RUN ./gradlew build -x test
+RUN ./gradlew build
 
 FROM openjdk:19-jdk
 VOLUME /tmp
